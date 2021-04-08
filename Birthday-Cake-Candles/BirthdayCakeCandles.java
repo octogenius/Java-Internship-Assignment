@@ -1,12 +1,10 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
 import java.lang.Integer;
 import java.lang.Math;
 import java.lang.String;
 import java.lang.System;
-
 import java.util.StringTokenizer;
 
 public class BirthdayCakeCandles {
@@ -27,14 +25,14 @@ public class BirthdayCakeCandles {
             int candlesCount = nextInt();
             int[] candleHeights = new int[candlesCount];
 
-            for(int x = 0; x < candlesCount; x++) {
+            for (int x = 0; x < candlesCount; x++) {
                 candleHeights[x] = nextInt();
             }
 
             int largestCandle = 0;
             int largestCandlesCount = 0;
 
-            for(int x = 0; x < candlesCount; x++) {
+            for (int x = 0; x < candlesCount; x++) {
                 if (candleHeights[x] > largestCandle) {
                     largestCandle = Math.max(candleHeights[x], largestCandle);
                     largestCandlesCount = 0;
@@ -45,9 +43,9 @@ public class BirthdayCakeCandles {
                 }
             }
 
-            System.out.println(largestCandlesCount);
+            System.out.print(largestCandlesCount);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.print(e);
         }
     }
